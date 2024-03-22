@@ -1,0 +1,41 @@
+.sidenav {
+  height: 89vh;
+  width: 200px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #690606;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.sidenav a {
+  padding: 10px 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+}
+
+.sidenav a:hover {
+  background-color: #574f4f;
+}
+
+.sidenav .active {
+  background-color: #ff3e4fd3;
+}
+.main-container {
+  height: 89vh;
+  width: 98vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.ctfassets.net/tytuahdkbx9m/7uTEHUe6cqI8c3hlcgkRed/090b62ff0d6230db5ea9e31cb82669bf/AdobeStock_495304908.Program.1200x800.jpg?fm=webp&q=50&w=1200&h=600&fit=thumb");
+  position: relative;
+  top: 60px;
+}
+
+.main-container {
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+}

@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card-head">
+    <h1 style="color: rgb(203, 18, 18)"><b>ADMIN DASHBOARD</b></h1>
+  </div>
+  <div class="card-body">
+    <!-- <div class="heading"><p><u>Guidelines for Admin-</u></p></div>
+        <div class="content">
+            <p><u>Donor Guidelines</u></p>
+          <p>  1.Donor should be physically healthy and should be between 18-65 years.</p>
+         <p>   2.They should have not donated blood within the previous 3 months.</p>
+         <p>3.Donors typically need to weight at least 110 pounds (50 kilograms) to donate blood safely.</p>
+         <p><u>Patient Guidelines</u></p>
+         <p>   1.Only 1 unit of blood is prescribed for the symptomatic,non-bleeding patient. </p>
+         <p>2.Secound unit is prescribed when Active blood loss.</p>
+         <p>3.If the request lacks necessary details or if the information provided is incorrect, it is to be  rejected.</p>
+         <p>4.In non-emergency cases where the need for blood is not immediate, requests will be in pending.</p>
+        </div>
+    </div> -->
+  </div>
+
+  <div class="total-donar">
+    <div class="donations">
+      <i class="fas fa-users close-icon"></i>
+      <h3>Total Donations</h3>
+      <p class="donar-count">{{ allDonations }}</p>
+    </div>
+  </div>
+
+  <div class="total-patient">
+    <div class="requests">
+      <i class="fas fa-hospital-user"></i>
+      <h3>Total Patients</h3>
+      <p class="patient-count">{{ allPatients }}</p>
+    </div>
+  </div>
+
+  <div class="total-acceept">
+    <div class="accept">
+      <i class="fas fa-check"></i>
+      <h3>Accepted Requests</h3>
+      <p class="accept-count">{{ totalAccepted }}</p>
+    </div>
+  </div>
+
+  <div class="total-reject">
+    <div class="reject">
+      <i class="fas fa-times"></i>
+      <h3>Rejected Requests</h3>
+      <p class="reject-count">{{ totalRejected }}</p>
+    </div>
+  </div>
+
+  <div class="total-pending">
+    <div class="pending">
+      <i class="fas fa-hourglass-half"></i>
+      <h3>Pending Requests</h3>
+      <p class="pending-count">{{ totalPending }}</p>
+    </div>
+  </div>
+
+  <div class="total-banks">
+    <div class="banks">
+      <i class="fas fa-university"></i>
+      <h3>Blood Banks</h3>
+      <p class="banks-count">{{ totalBanks }}</p>
+    </div>
+  </div>
+</div>

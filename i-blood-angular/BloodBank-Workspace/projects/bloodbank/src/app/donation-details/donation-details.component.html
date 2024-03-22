@@ -1,0 +1,62 @@
+<div class="main">
+  <table class="table" border="2" rules="all">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Donor Name</th>
+        <th>Blood Group</th>
+        <th>Blood Quantity</th>
+        <th>Date Of Donation</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let donor of getPaginatedItems(); let sno = index">
+        <td>{{ (currentPage - 1) * pageSize + sno + 1 }}</td>
+        <td>{{ donor.firstName }}</td>
+        <td>{{ donor.bloodType }}</td>
+        <td>{{ donor.bloodQuantity }}</td>
+        <td>{{ donor.dateOfDonation }}</td>
+        <td>{{ donor.status }}</td>
+        <td>
+          <button
+            class="accept"
+            (click)="acceptDonor(donor)"
+            [disabled]="donor.buttonDisabled || donor.disabled"
+            style="background-color: rgba(199, 207, 224, 0.274)"
+          >
+            Accept
+          </button>
+          <button
+            class="reject"
+            (click)="rejectDonor(donor)"
+            [disabled]="donor.buttonDisabled || donor.disabled"
+            style="background-color: rgb(151, 122, 122)"
+          >
+            Reject
+          </button>
+        </td>
+      </tr>
+    </tbody>             
+  </table>
+  <div class="page">
+    <button
+      class="previous"
+      [disabled]="currentPage === 1"
+      (click)="onPageChange(currentPage - 1)"
+    >
+      Previous
+    </button>
+    <span class="currentPage"
+      ><B>{{ currentPage }}</B></span
+    >
+    <button
+      class="next"
+      [disabled]="currentPage * pageSize >= donorRequest.length"
+      (click)="onPageChange(currentPage + 1)"
+    >
+      Next
+    </button>
+  </div>
+</div>

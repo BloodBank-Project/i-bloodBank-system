@@ -1,0 +1,40 @@
+.main {
+  margin: 0;
+  padding: 0;
+  height: 580px;
+  background-image: url("https://st3.depositphotos.com/13349494/17896/i/450/depositphotos_178964122-stock-photo-package-blood-transfusion-isolated-white.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 580px;
+  overflow-x: hidden;
+}
+
+.main h1 {
+  position: relative;
+  top: 150px;
+  left: 350px;
+}
+.button-container {
+  display: flex;
+  position: relative;
+  top: 170px;
+  left: 520px;
+}
+
+.button {
+  padding: 10px 20px 10px 20px;
+  margin: 0 10px;
+  font-size: 30px;
+  border: 2px solid #312121;
+  background-color: #b30b0b;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.button:hover {
+  background-color: #f59898;
+  border-color: #f59898;
+}

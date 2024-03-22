@@ -1,0 +1,23 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  rel="stylesheet"
+/>
+<div class="main-container">
+  <div class="parent">
+    <div class="sidenav">
+      <a routerLink="/patientHome"
+        ><i class="fas fa-home"></i>&nbsp;&nbsp; Home</a
+      >
+      <a routerLink="patientRequest"
+        ><i class="fas fa-user"></i>&nbsp;&nbsp; Patient Request</a
+      >
+      <a routerLink="group"
+        ><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp; Change Location</a
+      >
+      <a routerLink="patientdetails"
+        ><i class="fas fa-user"></i>&nbsp;&nbsp; Patient Details</a
+      >
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

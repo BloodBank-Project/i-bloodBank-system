@@ -1,0 +1,19 @@
+<div class="main">
+  <table class="table" border="2" rules="all">
+    <img src="" alt="" srcset="" />
+    <thead>
+      <tr>
+        <th>Blood Quantity</th>
+        <th>Date Of Donation</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of donorHistory.donarDetails">
+        <td>{{ detail.bloodQuantity }}</td>
+        <td>{{ detail.dateOfDonation }}</td>
+        <td>{{ detail.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

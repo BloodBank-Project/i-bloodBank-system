@@ -1,0 +1,22 @@
+<div>
+  <form action="" (ngSubmit)="updateLocation()">
+    <table>
+      <tr id="label">
+        <label for="">Choose Blood Bank Location</label>
+      </tr>
+      <tr>
+        <select id="select" name="bloodBankId" [(ngModel)]="bloodBankId">
+          <option value="1" name="bloodBankId">Marathalli</option>
+          <option value="2" name="bloodBankId">Hebbal</option>
+          <option value="3" name="bloodBankId">Silkboard</option>
+        </select>
+      </tr>
+      <tr>
+        <input type="submit" name="" id="submit" routerLink="updateLocation" />
+      </tr>
+    </table>
+    <div>
+      <input type="submit" />
+    </div>
+  </form>
+</div>

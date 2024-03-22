@@ -1,0 +1,36 @@
+.main {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+  left: 100px;
+  bottom: 520px;
+}
+
+.table {
+  border-collapse: collapse;
+  background-color: #f56262;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  font-size: 25;
+  font-weight: 100;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: left;
+  border: 1px solid transparent;
+}
+
+.table th {
+  background-color: transparent;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: transparent;
+}

@@ -1,0 +1,30 @@
+<div class="main">
+  <table class="table" border="2" rules="all">
+    <thead>
+      <tr>
+        <th>PatientRequest Id</th>
+        <th>PatientRequest Units</th>
+        <th>PatientRequest On Date</th>
+        <th>Patient Medical Condition</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of request">
+        <td>{{ patient.patientRequestId }}</td>
+        <td>{{ patient.patientRequestUnits }}</td>
+        <td>{{ patient.patientRequestOnDate }}</td>
+        <td>{{ patient.patientMedicalCondition }}</td>
+        <td>{{ patient.status }}</td>
+        <td>
+          <button class="button" type="submit">
+            <a routerLink="/getPatient" class="btn-delete"> update </a>
+          </button>
+          <button class="button" type="submit">
+            <a routerLink="/getPatient" class="btn-delete"> delete </a>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

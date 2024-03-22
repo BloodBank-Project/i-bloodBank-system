@@ -1,0 +1,64 @@
+<div class="main">
+  <table class="table" border="2" rules="all">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Patient Name</th>
+        <th>Blood Group</th>
+        <th>PatientRequest Units</th>
+        <th>PatientRequest On Date</th>
+        <th>Patient Medical Condition</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of getPaginatedItems(); let sno = index">
+        <td>{{ (currentPage - 1) * pageSize + sno + 1 }}</td>
+        <td>{{ patient.firstName }}</td>
+        <td>{{ patient.bloodType }}</td>
+        <td>{{ patient.patientRequestUnits }}</td>
+        <td>{{ patient.patientRequestOnDate }}</td>
+        <td>{{ patient.patientMedicalCondition }}</td>
+        <td>{{ patient.status }}</td>
+        <td>
+          <button
+            class="accept"
+            (click)="acceptPatient(patient)"
+            [disabled]="patient.buttonDisabled || patient.disabled"
+            style="background-color: rgb(199, 207, 224, 0.274)"
+          >
+            Accept
+          </button>
+          <button
+            class="reject"
+            (click)="rejectPatient(patient)"
+            [disabled]="patient.buttonDisabled || patient.disabled"
+            style="background-color: rgb(151, 122, 122)"
+          >
+            Reject
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="page">
+    <button
+      class="previous"
+      [disabled]="currentPage === 1"
+      (click)="onPageChange(currentPage - 1)"
+    >
+      Previous
+    </button>
+    <span class="currentPage"
+      ><B>{{ currentPage }}</B></span
+    >
+    <button
+      class="next"
+      [disabled]="currentPage * pageSize >= patientRequest.length"
+      (click)="onPageChange(currentPage + 1)"
+    >
+      Next
+    </button>
+  </div>
+</div>

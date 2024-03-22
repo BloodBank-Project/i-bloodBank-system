@@ -1,0 +1,38 @@
+#main {
+    width: 50%;
+    height: 530px;
+    overflow: hidden;
+    position: relative;
+    top:50px;
+}
+
+.background {
+    width: 100%;
+    height: 530px;
+    background-repeat: no-repeat;
+    background-size:1250px 730px;
+    position: relative;
+    top: 20px;
+}
+
+.content {
+    margin-top: 15%;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.content input{
+    width: 20rem;
+    margin: 10px;
+}
+.otp{
+    position: relative;
+    left: 52px;
+}
+
+.verify{
+    position: relative;
+    left: 200px;
+    top: 20px;
+    background-color: rgb(14, 212, 243);
+}

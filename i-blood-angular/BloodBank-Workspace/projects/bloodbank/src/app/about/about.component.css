@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "font-family: " Gill Sans ", " Gill Sans MT ", Calibri, "
+    Trebuchet MS ", sans-serif";
+}
+#main {
+  overflow-x: hidden;
+}
+.heading {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  bottom: 40px;
+  left: 40%;
+}
+
+.heading h1 {
+  font-size: 50px;
+  color: #000;
+  margin-top: 120px;
+  position: relative;
+}
+
+.heading h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 auto;
+  background-color: #910606;
+}
+
+.heading p {
+  font-size: 18px;
+  color: rgb(31, 27, 27);
+  margin-top: 25px;
+  margin-bottom: 35px;
+  width: max-content;
+  position: relative;
+  left: 30px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 70px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-image:hover img {
+  transform: scale(1.2);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 23px;
+  color: #910606;
+  font-family: cursive;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #910606;
+  overflow: auto;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+
+.footer .ul1 li {
+  list-style: none;
+  text-decoration: none;
+  float: left;
+  color: white;
+  margin: 3px 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+.footer .ul2 li {
+  list-style: none;
+  text-decoration: none;
+  float: right;
+  color: white;
+  margin: 3px 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: relative;
+  right: 10px;
+}
+
+.footer-menu {
+  width: 50%;
+  text-align: left;
+}

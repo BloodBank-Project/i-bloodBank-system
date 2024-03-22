@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Title</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+
+<header class="sticky-header">
+  <nav class="navbar">
+    <div class="logo">
+      <img
+        src="https://i.pinimg.com/236x/26/a1/6c/26a16cbe6c24539d6fec034e43716d2e.jpg"
+        alt="logo"
+      />
+      <b><h6>I-BLOOD SERVICES</h6></b>
+    </div>
+
+    <div class="nav-menu">
+      <ul>
+        <li>
+          <a routerLink="/home"><i class="fas fa-home"></i>&nbsp; HOME</a>
+        </li>
+        <li>
+          <a routerLink="/about"
+            ><i class="fas fa-info-circle"></i>&nbsp; ABOUT US</a
+          >
+        </li>
+        <li>
+          <a routerLink="/contact"
+            ><i class="fas fa-envelope"></i>&nbsp; CONTACT US</a
+          >
+        </li>
+        <li>
+          <a routerLink="/faq-auth"
+            ><i class="fas fa-question-circle"></i>&nbsp; FAQs</a
+          >
+        </li>
+        <li>
+          <a routerLink="search"><i class="fas fa-search"></i>&nbsp; SEARCH</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="reg">
+      <button *ngIf="!authService.session" id="buttonText">
+        <a routerLink="/loginUser">
+          <i class="fas fa-arrow-circle-right"></i> LOGIN
+        </a>
+      </button>
+    </div>
+
+    <div class="reg" id="logout">
+      <button
+        id="bt"
+        (click)="authService.logout()"
+        *ngIf="authService.session"
+      >
+        <a routerLink="/home">
+          <p class="t">
+            <b class="name">
+              <i class="bi bi-person-fill"></i>
+              {{ this.authService.fullName }}</b
+            >
+          </p>
+          <p class="l"><i class="fas fa-sign-out-alt"></i>LOGOUT</p>
+        </a>
+      </button>
+    </div>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</header>

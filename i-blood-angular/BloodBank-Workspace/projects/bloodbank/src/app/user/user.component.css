@@ -1,0 +1,66 @@
+#page {
+  border: 5px solid #dc3545;
+  margin: 0%;
+  box-shadow: 1px 12px 20px 5px #dc3545;
+  border-radius: 10px;
+  position: relative;
+  top: 65px;
+  overflow-x: hidden;
+}
+#main {
+  background-image: url("https://st4.depositphotos.com/20520458/29882/i/450/depositphotos_298821682-stock-photo-hand-gives-red-heart-hand.jpg");
+  background-repeat: no-repeat;
+  background-size: 1250px 550px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+#reg {
+  width: 550px;
+  height: 480px;
+  position: relative;
+  left: 670px;
+  font-weight: bolder;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#sub {
+  width: 90%;
+  margin: auto;
+}
+input {
+  width: 470px;
+  height: 30px;
+}
+.ra {
+  width: auto;
+  height: auto;
+}
+header {
+  background: #dc3545;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+.inp {
+  padding-top: 15px;
+}
+.inp select {
+  width: 470px;
+  height: 30px;
+}
+.submit {
+  position: relative;
+  top: 20px;
+  left: 200px;
+}
+.submit input {
+  width: 80px;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #dc3545;
+  color: white;
+  position: relative;
+  bottom: 10px;
+}

@@ -1,0 +1,47 @@
+<div class="main">
+  <table class="table" border="2" rules="all">
+    <img src="" alt="" srcset="" />
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Date Of Birth</th>
+        <th>Gender</th>
+        <th>Contact Number</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of getPaginatedItems(); let sno = index">
+        <td>{{ (currentPage - 1) * pageSize + sno + 1 }}</td>
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.dateOfBirth }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.contactNumber }}</td>
+        <td>{{ user.address }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page">
+    <button
+      class="previous"
+      [disabled]="currentPage === 1"
+      (click)="onPageChange(currentPage - 1)"
+    >
+      Previous
+    </button>
+    <span class="currentPage"
+      ><B>{{ currentPage }}</B></span
+    >
+    <button
+      class="next"
+      [disabled]="currentPage * pageSize >= users.length"
+      (click)="onPageChange(currentPage + 1)"
+    >
+      Next
+    </button>
+  </div>
+</div>

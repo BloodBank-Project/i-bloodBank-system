@@ -1,0 +1,70 @@
+.main {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  left: 30px;
+  top: 60px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: left;
+  border: 1px solid #c4bfbf;
+}
+
+.table th {
+  background-color: rgb(241, 109, 109);
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.accept:hover {
+  background-color: #5f685f;
+  cursor: pointer;
+}
+
+.reject:hover {
+  background-color: #f3a4a4;
+  cursor: pointer;
+}
+
+.page {
+  position: relative;
+  top: 55px;
+  left: 40px;
+}
+
+.previous:hover {
+  cursor: pointer;
+}
+
+.next:hover {
+  cursor: pointer;
+}
+
+.previous {
+  width: 9%;
+  height: 35px;
+}
+
+.next {
+  width: 9%;
+  height: 35px;
+}

@@ -1,0 +1,51 @@
+<div class="main">
+  <label class="label"
+    >Search:
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="changeData($event)"
+      placeholder="Enter location here..."
+  /></label>
+
+  <table class="table" border="2" rules="all">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Blood-Group Name</th>
+        <th>Blood-Bank Location</th>
+        <th>Available Blood</th>
+        <th>Blood Quantity</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let details of getPaginatedItems(); let sno = index">
+        <td>{{ (currentPage - 1) * pageSize + sno + 1 }}</td>
+        <td>{{ details.bloodBankName }}</td>
+        <td>{{ details.bloodBankLocation }}</td>
+        <td>{{ details.availableBloodGroup }}</td>
+        <td>{{ details.bloodQuantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="page">
+    <button
+      class="previous"
+      [disabled]="currentPage === 1"
+      (click)="onPageChange(currentPage - 1)"
+    >
+      Previous
+    </button>
+    <span class="currentPage"
+      ><B>{{ currentPage }}</B></span
+    >
+    <button
+      class="next"
+      [disabled]="currentPage * pageSize >= bank.length"
+      (click)="onPageChange(currentPage + 1)"
+    >
+      Next
+    </button>
+  </div>
+</div>

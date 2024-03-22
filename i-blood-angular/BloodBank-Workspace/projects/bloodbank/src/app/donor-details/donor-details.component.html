@@ -1,0 +1,114 @@
+<div class="image">
+  <div class="heading"></div>
+  <form #frmRegister="ngForm" (submit)="SendRequest(frmRegister.value)">
+    <table class="main">
+      <tr>
+        <b>Give the gift of life, donate blood</b>
+      </tr>
+      <tr>
+        <td>Donation date</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="date"
+            class="input"
+            [(ngModel)]="request.dateOfDonation"
+            name="dateOfDonation"
+            required
+            [min]="currentDate"
+          />
+        </td>
+      </tr>
+      <div
+        *ngIf="
+          frmRegister.controls['dateOfDonation'].invalid &&
+          frmRegister.controls['dateOfDonation'].touched
+        "
+        class="text-danger"
+      >
+        <span
+          *ngIf="frmRegister.controls['dateOfDonation'].errors?.['required']"
+          >Donation date is required.</span
+        >
+      </div>
+      <tr>
+        <td>Units Donating</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="number"
+            class="input"
+            [(ngModel)]="request.bloodQuantity"
+            name="bloodQuantity"
+            required
+            max="2"
+            min="1"
+          />
+        </td>
+      </tr>
+      <div
+        *ngIf="
+          frmRegister.controls['bloodQuantity'].invalid &&
+          frmRegister.controls['bloodQuantity'].touched
+        "
+        class="text-danger"
+      >
+        <span *ngIf="frmRegister.controls['bloodQuantity'].errors?.['required']"
+          >Units donating is required.</span
+        >
+        <span *ngIf="frmRegister.controls['bloodQuantity'].errors?.['max']"
+          >Units should be at most 2.</span
+        >
+      </div>
+      <div class="agree">
+        <tr>
+          <td>
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              (click)="openDialog()"
+            >
+              I agree with the terms and conditions
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="checkbox"
+              [(ngModel)]="request.agree"
+              name="agree"
+              required
+            />
+          </td>
+        </tr>
+        <div
+          *ngIf="
+            frmRegister.controls['agree'].invalid &&
+            frmRegister.controls['agree'].touched
+          "
+          class="text-danger"
+        >
+          <span *ngIf="frmRegister.controls['agree'].errors?.['required']"
+            >You must agree to the terms and conditions.</span
+          >
+        </div>
+      </div>
+      <tr>
+        <td>
+          <button
+            routerLink="donorDetails"
+            class="button"
+            type="submit"
+            [disabled]="frmRegister.invalid"
+          >
+            Submit
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

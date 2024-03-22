@@ -1,0 +1,14 @@
+<div id="main">
+    <div class="background">
+      <div class="content">
+        <h1>Verify with OTP</h1>
+        <form [formGroup]="passwordForm">
+          <label for="email">Enter Email: </label>
+          <input type="text" id="email" name="email" required formControlName="email"><br>
+          <label for="otp">OTP: </label>
+          <input class="otp" type="text" id="enteredOtp" name="enteredOtp" required formControlName="enteredOtp"><br>
+          <button type="button" class="btn btn-primary" class="verify" (click)="verifyOtp()" >Verify</button>
+        </form>
+      </div>
+    </div>
+  </div> 

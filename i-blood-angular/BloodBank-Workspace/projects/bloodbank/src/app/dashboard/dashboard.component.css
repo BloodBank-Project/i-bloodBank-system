@@ -1,0 +1,333 @@
+.overview {
+  margin: 20px;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.statistic {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chart-container {
+  margin-top: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  margin: 1.25rem 0 1.25rem 0;
+  box-shadow: 0 0.25rem 0.5rem #e6edef;
+  position: relative;
+  bottom: 12px;
+  left: 10px;
+  .card-head {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #edf1f7;
+    font-size: 0.3rem;
+    font-weight: 600;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    text-align: center;
+  }
+
+  .card-body {
+    padding: 1rem 1.5rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+
+    strong {
+      color: rgba(196, 19, 19, 0.986);
+      font-size: x-large;
+    }
+    p {
+      font-size: larger;
+      font-weight: 400;
+    }
+    color: black;
+    img {
+      position: relative;
+      top: 15px;
+      left: 230px;
+      width: 50%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.total-donar {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transition: transform 0.3s;
+}
+.total-donar:hover {
+  cursor: pointer;
+  transform: scale(1.02398);
+}
+.donations {
+  width: 28%;
+  height: 130px;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e6d8d8;
+
+  i {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    color: rgb(4, 4, 194);
+    font-size: 30px;
+  }
+  h3 {
+    position: relative;
+    bottom: 10px;
+    font-size: 23px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .donar-count {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(206, 12, 12);
+  }
+}
+
+.total-patient {
+  position: relative;
+  left: 340px;
+  bottom: 110px;
+  transition: transform 0.3s;
+}
+.total-patient:hover {
+  cursor: pointer;
+  transform: scale(1.02398);
+}
+.requests {
+  width: 28%;
+  height: 130px;
+  box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.2);
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e6d8d8;
+
+  i {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    color: rgb(4, 4, 194);
+    font-size: 24px;
+  }
+  h3 {
+    position: relative;
+    bottom: 10px;
+    font-size: 23px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .patient-count {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(206, 12, 12);
+  }
+}
+
+.total-acceept {
+  position: relative;
+  left: 660px;
+  bottom: 240px;
+  transition: transform 0.3s;
+}
+.total-acceept:hover {
+  cursor: pointer;
+  transform: scale(1.02398);
+}
+.accept {
+  width: 28%;
+  height: 130px;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e6d8d8;
+
+  i {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    color: rgb(4, 4, 194);
+    font-size: 24px;
+  }
+  h3 {
+    position: relative;
+    bottom: 10px;
+    font-size: 23px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: rgb(27, 29, 29);
+  }
+  .accept-count {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(206, 12, 12);
+  }
+}
+
+.total-reject {
+  position: relative;
+  right: -20px;
+  top: -220px;
+  bottom: 240px;
+  transition: transform 0.3s;
+}
+.total-reject:hover {
+  cursor: pointer;
+  transform: scale(1.02398);
+}
+.reject {
+  width: 28%;
+  height: 130px;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e6d8d8;
+
+  i {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    color: rgb(4, 4, 194);
+    font-size: 24px;
+  }
+  h3 {
+    position: relative;
+    bottom: 10px;
+    font-size: 23px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: rgb(27, 29, 29);
+  }
+  .reject-count {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(206, 12, 12);
+  }
+}
+
+.total-pending {
+  position: relative;
+  right: -340px;
+  top: -350px;
+  bottom: 240px;
+  transition: transform 0.3s;
+}
+.total-pending:hover {
+  cursor: pointer;
+  transform: scale(1.02398);
+}
+.pending {
+  width: 28%;
+  height: 130px;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e6d8d8;
+
+  i {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    color: rgb(4, 4, 194);
+    font-size: 24px;
+  }
+  h3 {
+    position: relative;
+    bottom: 10px;
+    font-size: 23px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: rgb(27, 29, 29);
+  }
+  .pending-count {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(206, 12, 12);
+  }
+}
+
+.total-banks {
+  position: relative;
+  right: -660px;
+  top: -480px;
+  bottom: 240px;
+  transition: transform 0.3s;
+}
+.total-banks:hover {
+  cursor: pointer;
+  transform: scale(1.02398);
+}
+.banks {
+  width: 28%;
+  height: 130px;
+  border: 2px solid #ccc;
+  box-shadow: 4px 4px 4px rgba(8, 8, 8, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e6d8d8;
+
+  i {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    color: rgb(4, 4, 194);
+    font-size: 30px;
+  }
+  h3 {
+    position: relative;
+    bottom: 10px;
+    font-size: 23px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    color: rgb(27, 29, 29);
+  }
+  .banks-count {
+    position: relative;
+    top: 4px;
+    left: 5px;
+    font-size: 20px;
+    color: rgb(206, 12, 12);
+  }
+}

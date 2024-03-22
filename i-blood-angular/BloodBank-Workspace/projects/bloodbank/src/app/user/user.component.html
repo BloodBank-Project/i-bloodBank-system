@@ -1,0 +1,245 @@
+<div id="page">
+  <div id="main">
+    <div id="reg">
+      <div id="sub">
+        <header>
+          <h1>Create An Account</h1>
+        </header>
+        <form #frmRegister="ngForm" (submit)="sendUser(frmRegister.value)">
+          <div class="inp">
+            <label for="">FirstName</label>
+            <input
+              type="text"
+              name="firstName"
+              id=""
+              required
+              ngModel
+              #firstName="ngModel"
+            />
+            <div
+              *ngIf="firstName.invalid && firstName.touched"
+              class="text-danger"
+            >
+              <span *ngIf="firstName.errors?.['required']"
+                >First name is required</span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">LastName</label>
+            <input
+              type="text"
+              name="lastName"
+              id=""
+              required
+              ngModel
+              #lastName="ngModel"
+              [(ngModel)]="user.lastName"
+            />
+            <div
+              *ngIf="lastName.invalid && lastName.touched"
+              class="text-danger"
+            >
+              <span *ngIf="lastName.errors?.['required']"
+                >Last name is required</span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">Email</label>
+            <input
+              type="email"
+              name="email"
+              id=""
+              required
+              name="email"
+              ngModel
+              #email="ngModel"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <div *ngIf="email.invalid && email.touched" class="text-danger">
+              <span *ngIf="email.errors?.['required']">Email is required</span>
+              <span *ngIf="email.errors?.['pattern']"
+                >Invalid Email format</span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">Password</label>
+            <input
+              type="password"
+              name="password"
+              id=""
+              minlength="4"
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$"
+              ngModel
+              #password="ngModel"
+            />
+            <div
+              *ngIf="password.invalid && password.touched"
+              class="text-danger"
+            >
+              <span *ngIf="password.errors?.['required']"
+                >Password is required</span
+              >
+              <span *ngIf="password.errors?.['pattern']"
+                ><ul>
+                  <li>Password must contain at least one lowercase letter,</li>
+                  <li>
+                    one uppercase letter, one number, one special character,
+                  </li>
+                  <li>at least 8 characters long</li>
+                </ul></span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">Date Of Birth</label>
+
+            <input
+              type="date"
+              name="dateOfBirth"
+              ngModel
+              #dateOfBirth="ngModel"
+              [max]="maxDate"
+              required
+            />
+            <div
+              *ngIf="dateOfBirth.invalid && dateOfBirth.touched"
+              class="text-danger"
+            >
+              <span *ngIf="dateOfBirth.errors?.['required']"
+                >Date of birth is required</span
+              >
+              <span *ngIf="dateOfBirth.errors?.['max']"
+                >Age must be at least 18 years</span
+              >
+              <span *ngIf="dateOfBirth.errors?.['futureDate']"
+                >Date of birth cannot be in the future</span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">Gender</label>
+            <br />
+            <input
+              type="radio"
+              name="gender"
+              id=""
+              class="ra"
+              value="Female"
+              [(ngModel)]="user.gender"
+            />Female
+            <input
+              type="radio"
+              name="gender"
+              id=""
+              class="ra"
+              value="Male"
+              [(ngModel)]="user.gender"
+            />Male
+            <input
+              type="radio"
+              name="gender"
+              id=""
+              class="ra"
+              value="Others"
+              [(ngModel)]="user.gender"
+            />Others
+            <br />
+          </div>
+          <div class="inp">
+            <label for="">Address</label>
+            <textarea
+              name="address"
+              id=""
+              cols="56"
+              rows="3"
+              [(ngModel)]="user.address"
+            ></textarea>
+          </div>
+          <div class="inp">
+            <label for="">Phone Number</label>
+            <input
+              type="tel"
+              name="contactNumber"
+              id=""
+              pattern="[6-9][0-9]{9}"
+              ngModel
+              #contactNumber="ngModel"
+              required
+            />
+            <div
+              *ngIf="contactNumber.invalid && contactNumber.touched"
+              class="text-danger"
+            >
+              <span *ngIf="contactNumber.errors?.['required']"
+                >Mobile number is required</span
+              >
+              <span *ngIf="contactNumber.errors?.['pattern']"
+                >Number must be 10 digits.Should not start with 0</span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">Alternate Phone Number</label>
+            <input
+              type="tel"
+              name="alternateContactNumber"
+              id=""
+              id=""
+              pattern="[6-9][0-9]{9}"
+              ngModel
+              #alternateContactNumber="ngModel"
+              required
+            />
+            <div
+              *ngIf="
+                alternateContactNumber.invalid && alternateContactNumber.touched
+              "
+              class="text-danger"
+            >
+              <span *ngIf="alternateContactNumber.errors?.['required']"
+                >Mobile number is required</span
+              >
+              <span *ngIf="alternateContactNumber.errors?.['pattern']"
+                >Number must be 10 digits.Should not start with 0</span
+              >
+            </div>
+          </div>
+          <div class="inp">
+            <label for="">Blood Group</label>
+            <select name="bloodGroupId" [(ngModel)]="user.bloodGroupId">
+              <option value="1" name="type">A+</option>
+              <option value="2" name="type">B+</option>
+              <option value="3" name="type">O+</option>
+              <option value="4" name="type">AB+</option>
+              <option value="5" name="type">A-</option>
+              <option value="6" name="type">B-</option>
+              <option value="7" name="type">O-</option>
+              <option value="8" name="type">AB-</option>
+            </select>
+          </div>
+          <div class="inp">
+            <label for="">Blood Bank</label>
+            <select name="bloodBankId" [(ngModel)]="user.bloodBankId">
+              <option value="1" name="type">Marathalli</option>
+              <option value="2" name="type">Hebbal</option>
+              <option value="3" name="type">Silkboard</option>
+            </select>
+          </div>
+          <div class="submit">
+            <button
+              type="submit"
+              routerLink="/saveUser"
+              [disabled]="frmRegister.invalid"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

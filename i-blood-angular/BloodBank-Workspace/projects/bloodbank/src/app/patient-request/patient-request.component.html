@@ -1,0 +1,137 @@
+<div class="image">
+  <div class="heading"></div>
+  <form #frmRegister="ngForm" (submit)="SendRequest(frmRegister.value)">
+    <table class="main">
+      <tr>
+        <td>Patient Medical Condition</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="text"
+            class="input"
+            [(ngModel)]="request.patientMedicalCondition"
+            name="patientMedicalCondition"
+            required
+          />
+        </td>
+      </tr>
+      <div
+        *ngIf="
+          frmRegister.controls['patientMedicalCondition'].invalid &&
+          frmRegister.controls['patientMedicalCondition'].touched
+        "
+        class="text-danger"
+      >
+        <span
+          *ngIf="frmRegister.controls['patientMedicalCondition'].errors?.['required']"
+          >Medical condition is required.</span
+        >
+      </div>
+      <tr>
+        <td>Patient Request On date</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="date"
+            class="input"
+            [(ngModel)]="request.patientRequestOnDate"
+            name="patientRequestOnDate"
+            required
+            [min]="currentDate"
+          />
+        </td>
+      </tr>
+      <div
+        *ngIf="
+          frmRegister.controls['patientRequestOnDate'].invalid &&
+          frmRegister.controls['patientRequestOnDate'].touched
+        "
+        class="text-danger"
+      >
+        <span
+          *ngIf="frmRegister.controls['patientRequestOnDate'].errors?.['required']"
+          >Date is required.</span
+        >
+      </div>
+      <tr>
+        <td>Patient Request Units</td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="number"
+            class="input"
+            [(ngModel)]="request.patientRequestUnits"
+            name="patientRequestUnits"
+            required
+            max="4"
+            min="1"
+          />
+        </td>
+      </tr>
+      <div
+        *ngIf="
+          frmRegister.controls['patientRequestUnits'].invalid &&
+          frmRegister.controls['patientRequestUnits'].touched
+        "
+        class="text-danger"
+      >
+        <span
+          *ngIf="frmRegister.controls['patientRequestUnits'].errors?.['required']"
+          >Units donating is required.</span
+        >
+        <span
+          *ngIf="frmRegister.controls['patientRequestUnits'].errors?.['max']"
+          >Enter units between 1 and 4.</span
+        >
+      </div>
+      <div class="agree">
+        <tr class="td1">
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm"
+            (click)="openDialogPatient()"
+          >
+            I agree with the terms and conditions
+          </button>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="checkbox"
+              class="checkbox"
+              [(ngModel)]="request.agree"
+              name="agree"
+              required
+            />
+          </td>
+        </tr>
+        <div
+          *ngIf="
+            frmRegister.controls['agree'].invalid &&
+            frmRegister.controls['agree'].touched
+          "
+          class="text-danger"
+        >
+          <span *ngIf="frmRegister.controls['agree'].errors?.['required']"
+            >You must agree to the terms and conditions.</span
+          >
+        </div>
+      </div>
+      <tr>
+        <td>
+          <button
+            routerLink="patientRequest"
+            class="button"
+            type="submit"
+            [disabled]="frmRegister.invalid"
+          >
+            Submit
+          </button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

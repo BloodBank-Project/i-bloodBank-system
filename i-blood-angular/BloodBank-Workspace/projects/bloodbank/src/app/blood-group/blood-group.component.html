@@ -1,0 +1,19 @@
+<div class="main">
+  <p>Availability of Blood</p>
+  <div class="details-container">
+    <ng-container *ngFor="let details of groups; let i = index">
+      <div
+        class="details-box"
+        [ngClass]="{
+          'alternate-row': i % 2 === 0,
+          'alternate-col': i % 2 !== 0
+        }"
+      >
+        <div class="details-content">
+          <div class="blood-group">{{ details.availableBloodGroup }}</div>
+          <div class="blood-quantity">{{ details.bloodQuantity }}</div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
